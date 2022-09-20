@@ -10,6 +10,10 @@ function login(){
    const req = {
     id: id.value,
     psword: psword.value,
-   };
+   };   
    console.log(req);
+   console.log(JSON.stringify(req));
+   fetch("/login",{
+    body: JSON.stringify(req)
+   })
 }
